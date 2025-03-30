@@ -1,0 +1,328 @@
+/* EPCPage.css */
+:root {
+    --primary-blue: #005792;
+    --accent-orange: #FF6B6B;
+    --dark-gray: #2D4059;
+    --light-gray: #F8F9FA;
+    --text-dark: #2B2D42;
+  }
+  
+  .epc-page {
+    font-family: "Bree Serif", serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  /* Services Section */
+  .services-section {
+    padding: 4rem 1rem;
+    background: var(--light-gray);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+  }
+  
+  .header-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-orange);
+    margin: 0 auto;
+  }
+  
+  .services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    min-height: 550px; /* Adjust based on content */
+  }
+  
+  .system-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .system-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover .system-image {
+    transform: scale(1.05);
+  }
+  
+  .service-card h3 {
+    color: var(--dark-gray);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    min-height: 3.5rem;
+  }
+  
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    flex-grow: 1;
+  }
+  
+  .service-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: rgba(245, 245, 245, 0.5);
+    border-radius: 6px;
+  }
+  
+  .service-features svg {
+    color: var(--accent-orange);
+    margin-right: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  
+  /* Comparison Table */
+  .comparison-section {
+    padding: 4rem 1rem;
+  }
+  
+  .comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  th, td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    min-width: 150px;
+  }
+  
+  th {
+    background: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    left: 0;
+  }
+  
+  tr:nth-child(even) {
+    background: var(--light-gray);
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    padding: 4rem 1rem;
+    background: var(--primary-blue);
+    color: white;
+  }
+  
+  .stats-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .stat-card h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-card p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .section-header h2 {
+      font-size: 2.5rem;
+    }
+  
+    .service-card {
+      padding: 2rem;
+      min-height: 600px;
+    }
+  
+    .service-card h3 {
+      font-size: 1.75rem;
+    }
+  
+    .service-features li {
+      font-size: 1.05rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .service-card {
+      min-height: auto;
+    }
+    
+    .system-image-container {
+      height: 200px;
+    }
+  
+    th, td {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Comparison Table */
+  .comparison-section {
+    padding: 4rem 1rem;
+  }
+  
+  .comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--primary-blue);
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    background: white;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .table-row:nth-child(even) {
+    background: var(--light-gray);
+  }
+  
+  .row-item {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature {
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    padding: 4rem 1rem;
+    background: var(--primary-blue);
+    color: white;
+  }
+  
+  .stats-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .stat-card h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-card p {
+    color: rgba(255,255,255,0.9);
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .hero-content h1 {
+      font-size: 3.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1.5rem;
+    }
+  
+    .section-header h2 {
+      font-size: 2.5rem;
+    }
+  
+    .service-card {
+      padding: 3rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .table-header,
+    .table-row {
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+    }
+  }
+  /* Add to EPCPage.css */
+  .system-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .system-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover .system-image {
+    transform: scale(1.05);
+  }
+  
+  /* Update service-card padding */
+  .service-card {
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+  
+  /* Keep other styles same */

@@ -1,0 +1,128 @@
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left: Text Content */
+.content {
+    flex: 1;
+    padding: 2rem;
+    text-align: left;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.highlight {
+    color: #ff8c00;
+}
+
+.description {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Animated Stats */
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff8c00;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.experience-badge {
+    background: #ff8c00;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+.experience-badge:hover {
+    background: #e07b00;
+}
+
+/* Right: Image */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    width: 90%;
+    width: 750px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-frame:hover {
+    transform: scale(1.05);
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .content, .image-container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

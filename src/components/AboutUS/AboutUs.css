@@ -1,0 +1,234 @@
+:root {
+    --solar-yellow: #FFD700;
+    --eco-green: #27AE60;
+    --dark-blue: #2C3E50;
+    --sun-orange: #FF6B35;
+    --light-gray: #F8F9FA;
+  }
+  
+  /* Base Styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    line-height: 1.6;
+    font-family: "Bree Serif", serif;
+  }
+  
+  /* Hero Section */
+  .about-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-content p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Company Overview */
+  .company-overview {
+    padding: 4rem 1rem;
+    background: var(--light-gray);
+  }
+  
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .text-content {
+    order: 2;
+  }
+  
+  .section-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--eco-green);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tag-icon {
+    font-size: 1.2rem;
+  }
+  
+  .featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .achievement-item {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  
+  .achievement-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--eco-green);
+  }
+  
+  /* Core Values */
+  .core-values {
+    padding: 4rem 1rem;
+    background: white;
+  }
+  
+  .values-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1.5rem;
+  }
+  
+  .value-card {
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    background: var(--light-gray);
+  }
+  
+  .value-icon-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+  }
+  
+  .value-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Commitment Section */
+  .commitment {
+    padding: 4rem 1rem;
+    background: var(--light-gray);
+  }
+  
+  .solar-stats {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .content-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    
+    .text-content {
+      order: initial;
+    }
+  
+    .hero-content {
+      padding: 0 2rem;
+    }
+  
+    .company-overview,
+    .core-values,
+    .commitment {
+      padding: 6rem 2rem;
+    }
+  
+    .values-grid {
+      gap: 2rem;
+    }
+  
+    .solar-stats {
+      gap: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-content h1 {
+      margin-bottom: 2rem;
+    }
+  
+    .achievement-number {
+      font-size: 2rem;
+    }
+  
+    .value-icon-container {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .value-icon {
+      font-size: 2rem;
+    }
+  }

@@ -1,0 +1,148 @@
+/* General Styling */
+.gallery-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .gallery-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gallery-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Filter Buttons */
+  .filter-buttons {
+    margin-bottom: 2rem;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .filter-buttons button {
+    padding: 0.7rem 1.5rem;
+    margin: 0.3rem;
+    border: none;
+    background-color:  #27AE60;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .filter-buttons button:hover, .filter-buttons .active {
+    background-color: #27AE60;
+  }
+  
+  /* Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Hover Overlay */
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image-container:hover .hover-overlay {
+    opacity: 1;
+  }
+  
+  .hover-overlay .content {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .hover-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hover-overlay .location {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hover-overlay .details span {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+  
+  .zoom-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .zoom-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons button {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  

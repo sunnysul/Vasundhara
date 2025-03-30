@@ -1,0 +1,329 @@
+.services-page {
+    font-family: "Bree Serif", serif;
+    color: #2d3436;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: "Bree Serif", serif;
+  }
+  
+  /* Video Banner Section */
+  .services-banner {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .banner-content p {
+    font-size: 1.4rem;
+    max-width: 800px;
+  }
+  
+  /* Key Services Section */
+  .key-services {
+    padding: 6rem 0;
+    background: white;
+    
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+  }
+  
+  .title-divider {
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+    margin: 1rem auto;
+  }
+  
+  .key-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 0 2rem;
+    
+  }
+  
+  .key-service-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .key-service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ks-image-wrapper {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .key-service-card:hover .service-image {
+    transform: scale(1.05);
+  }
+  
+  .key-service-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    padding: 1.5rem 1.5rem 0;
+    margin-bottom: 1rem;
+  }
+  
+  .service-description {
+    color: #666;
+    line-height: 1.6;
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .features-list {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #636e72;
+    font-size: 0.95rem;
+  }
+  
+  .feature-icon {
+    color: #2ecc71;
+    margin-right: 0.8rem;
+    min-width: 20px;
+  }
+  
+  /* Configuration Systems Section */
+  .configuration-systems {
+    padding: 6rem 0;
+    background: #f8f9fa;
+  }
+  
+  .systems-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .system-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .systems-list {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .system-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+  
+  .system-icon {
+    font-size: 1.8rem;
+    color: #3498db;
+    margin-right: 1.5rem;
+  }
+  
+  /* Net Metering Section */
+  .net-metering {
+    padding: 6rem 0;
+    background: white;
+  }
+  
+  .metering-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .visual-content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  /* .benefits-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  } */
+   .path{
+    
+   }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .banner-content h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .services-banner {
+      height: 70vh;
+    }
+    
+    .key-services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-banner {
+      height: 60vh;
+    }
+    
+    .banner-content h1 {
+      font-size: 2.2rem;
+    }
+    
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+    
+    .key-services-grid,
+    .systems-grid,
+    .metering-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .system-image {
+      order: -1;
+    }
+    
+    .system-card {
+      padding: 1.5rem;
+    }
+    
+    .metering-content {
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .services-banner {
+      height: 50vh;
+    }
+    
+    .banner-content h1 {
+      font-size: 1.8rem;
+    }
+    
+    .banner-content p {
+      font-size: 1rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    
+    .key-service-card h3 {
+      font-size: 1.3rem;
+    }
+    
+    .feature-item {
+      font-size: 0.9rem;
+    }
+    
+    .system-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .banner-content h1 {
+      font-size: 1.6rem;
+    }
+    
+    .key-service-card {
+      margin: 0 -10px;
+    }
+    
+    .system-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .benefits-list li {
+      font-size: 0.9rem;
+    }
+  }

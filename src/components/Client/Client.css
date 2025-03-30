@@ -1,0 +1,102 @@
+/* Clients.css */
+.clients-page {
+    padding: 60px 20px;
+    max-width: 1400px; /* Increased max-width */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .clients-page h1 {
+    font-size: 3rem; /* Larger heading */
+    margin-bottom: 50px;
+    color: #333;
+  }
+  
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider columns */
+    gap: 40px; /* Increased gap */
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .client-card {
+    background: #fff;
+    border-radius: 12px; /* Larger border radius */
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px; /* Taller cards */
+    border: 2px solid #e0e0e0; /* Thicker border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* Stronger shadow */
+  }
+  
+  .client-card:hover {
+    transform: translateY(-8px); /* More pronounced hover lift */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: #b0b0b0;
+  }
+  
+  .client-image {
+    max-width: 220px; /* Larger images */
+    max-height: 160px;
+    object-fit: contain;
+    margin-bottom: 20px; /* More spacing */
+    transition: transform 0.3s ease;
+  }
+  
+  .client-name {
+    font-size: 1.4rem; /* Larger text */
+    color: #555;
+    font-weight: 600; /* Bolder font */
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .clients-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    
+    .client-card {
+      height: 250px;
+      padding: 20px;
+    }
+    
+    .client-image {
+      max-width: 180px;
+    }
+    
+    .client-name {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .clients-page {
+      padding: 40px 15px;
+    }
+    
+    .clients-page h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+    
+    .client-card {
+      height: 200px;
+      padding: 15px;
+    }
+    
+    .client-image {
+      max-width: 140px;
+    }
+    
+    .client-name {
+      font-size: 1.1rem;
+    }
+  }

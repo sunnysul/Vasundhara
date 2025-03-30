@@ -1,0 +1,219 @@
+/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+:root {
+  --primary: #2ecc71;
+  --secondary: #34495e;
+  --accent: #e67e22;
+  --text: #2c3e50;
+  --border: #ecf0f1;
+  font-family: "Bree Serif", serif;;
+}
+
+/* Base Styles */
+.homepage {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  font-family: "Bree Serif", serif;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Bree Serif", serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-family: "Bree Serif", serif;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: fadeInUp 1s ease 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease 0.4s;
+  animation-fill-mode: backwards;
+}
+
+.cta-button:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator svg {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 90vh;
+    min-height: 500px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 85vh;
+    min-height: 400px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 20px;
+  }
+  
+  .scroll-indicator svg {
+    font-size: 1.5rem;
+  }
+}

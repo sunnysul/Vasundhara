@@ -1,0 +1,178 @@
+.solar-section {
+    padding: 5rem 0;
+    background: #f9f9f9;
+  }
+  
+  .solar-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: "Bree Serif", serif;
+  }
+  
+  .solar-header h2 {
+    font-size: 2.5rem;
+    color:black;
+    margin-bottom: 1rem;
+  }
+  
+  .solar-subtitle {
+    color:black;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: "Bree Serif", serif;
+  }
+  .solar title{
+    color:  black;
+  }
+  
+  .solar-divider {
+    width: 60px;
+    height: 3px;
+    background: #e74c3c;
+    margin: 0 auto;
+  }
+  
+  /* Solar Grid */
+  .solar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  /* Solar Card */
+  .solar-card {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .solar-card-front,
+  .solar-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+  }
+  
+  .solar-card-front {
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .solar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .solar-card:hover .solar-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .solar-card-back {
+    background: white;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    padding: 2rem;
+  }
+  
+  .solar-card:hover .solar-card-back {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .solar-back-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .solar-benefits {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    flex-grow: 1;
+  }
+  
+  .solar-benefits li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .solar-benefits svg {
+    color: #27ae60;
+    margin-right: 0.5rem;
+  }
+  
+  .solar-cta {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .solar-cta:hover {
+    background: #c0392b;
+  }
+  
+  .cta-arrow {
+    font-size: 0.8rem;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+      height: 350px;
+    }
+  }
+  /* Add these media queries at the end of the existing CSS */
+  
+  @media (max-width: 1200px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hero {
+      min-height: 70vh;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-container {
+      gap: 2rem;
+    }
+  
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }

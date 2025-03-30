@@ -1,0 +1,257 @@
+:root {
+    --solar-yellow: #FFD700;
+    --eco-green: #27AE60;
+    --dark-blue: #2C3E50;
+    --light-gray: #ECF0F1;
+    --section-spacing: clamp(1.5rem, 3vw, 2rem);
+  }
+  
+  /* Footer Styles */
+  .footer {
+    width: 100%;
+    background: var(--dark-blue);
+    color: var(--light-gray);
+    padding: clamp(1rem, 2vw, 2rem) 0;
+    border-top: 3px solid var(--solar-yellow);
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: auto; /* Pushes footer to bottom */
+  }
+  
+  .footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+  
+  /* Rest of your existing footer styles remain exactly the same */
+  /* ... (keep all your existing footer styles below this line) ... */
+  /* Brand Section */
+  .footer__brand {
+    text-align: center;
+    margin-bottom: var(--section-spacing);
+  }
+  
+  .footer__logo {
+    display: inline-block;
+    max-width: min(200px, 60vw);
+    margin: 0 auto 1.5rem;
+  }
+  
+  .logo-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .footer__tagline {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: rgba(236, 240, 241, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Sections Grid */
+  .footer__sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: clamp(1.5rem, 3vw, 3rem);
+    margin: clamp(1rem, 2vw, 2rem) 0;
+    padding: clamp(1rem, 2vw, 2rem) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  /* Column Styles */
+  .footer__col {
+    padding: 0.5rem;
+  }
+  
+  .footer__title {
+    color: var(--solar-yellow);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .footer__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--eco-green);
+  }
+  
+  /* Contact Information */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+  
+  .contact-item .icon {
+    color: var(--eco-green);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+  
+  .contact-item a {
+    color: var(--light-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 1.5;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+  
+  .contact-item a:hover {
+    color: var(--solar-yellow);
+    text-decoration: underline;
+  }
+  
+  .phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  /* Navigation Links */
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .nav-link {
+    color: var(--light-gray);
+    text-decoration: none;
+    width: fit-content;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    transition: all 0.3s ease;
+    padding: 0.3rem 0;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: var(--solar-yellow);
+    transform: translateX(5px);
+  }
+  
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-top: 1.2rem;
+  }
+  
+  .social-link {
+    color: var(--light-gray);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    padding: 0.6rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(40px, 8vw, 45px);
+    height: clamp(40px, 8vw, 45px);
+  }
+  
+  .social-link:hover {
+    background: var(--solar-yellow);
+    color: var(--dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255,215,0,0.2);
+  }
+  
+  /* Bottom Section */
+  .footer__bottom {
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+    padding-top: clamp(0.5rem, 1.5vw, 1rem);
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .copyright {
+    color: rgba(236, 240, 241, 0.7);
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    margin: 0;
+  }
+  
+  /* WhatsApp specific styles */
+  .social-link.whatsapp {
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer__sections {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .footer__col {
+      text-align: center;
+      padding: 0;
+    }
+  
+    .contact-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  
+    .footer__title::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .nav-link {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem;
+    }
+  
+    .nav-link:hover {
+      transform: none;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 1rem 0;
+    }
+    
+    .footer__logo {
+      max-width: 180px;
+    }
+  
+    .footer__tagline {
+      line-height: 1.5;
+    }
+  
+    .social-link {
+      width: 42px;
+      height: 42px;
+    }
+  }
