@@ -1,56 +1,64 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/Vasundhara.png";
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const location = useLocation(); // Get the current route
+    const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
+    useEffect(() => {
+        if (location.pathname === "/service") {
+            setDropdownOpen(true);
+        } else {
+            setDropdownOpen(false);
+        }
+    }, [location.pathname]);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false);
 
     return (
         <>
             <nav className="navbar">
-                <img src={logo} alt="Vasundhara Logo" className="nav-logo" />
-                <ul className="nav-list">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
+                <img src={logo} alt="Vasundhara Logo" className="nav-logo" onClick={closeMenu} />
 
-                    {/* Services with Dropdown */}
+                {/* Hamburger Menu */}
+                <div className="hamburger" onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul className={`nav-list ${menuOpen ? "active" : ""}`}>
+                    <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                    <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
+
+                    {/* Services Dropdown */}
                     <li 
                         className="nav-item dropdown" 
                         onMouseEnter={() => setDropdownOpen(true)} 
-                        onMouseLeave={() => setDropdownOpen(false)}
+                        onMouseLeave={() => setDropdownOpen(location.pathname === "/service" ? true : false)}
                     >
-                        <Link 
-                            to="/service" 
-                            className="dropdown-toggle" 
-                            onClick={() => setDropdownOpen(true)} // Keep dropdown open on click
-                        >
+                        <Link to="/service" className="dropdown-link" onClick={closeMenu}>
                             Services
                         </Link>
-                        {(dropdownOpen || location.pathname === "/service") && (
-                            <ul className="dropdown-menu">
-                                <li><Link to="/epc">EPC</Link></li>
-                                <li><Link to="/consultancy">Consultancy</Link></li>
-                            </ul>
-                        )}
+                        <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+                            <li><Link to="/epc" onClick={closeMenu}>EPC</Link></li>
+                            <li><Link to="/consultancy" onClick={closeMenu}>Consultancy</Link></li>
+                        </ul>
                     </li>
 
-                    <li><Link to="/gallery">Gallery</Link></li>
-                    <li><Link to="/client">Client</Link></li>
-                    <li><Link to="/team">Team</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
+                    <li><Link to="/client" onClick={closeMenu}>Client</Link></li>
+                    <li><Link to="/team" onClick={closeMenu}>Team</Link></li>
+                    <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
                 </ul>
             </nav>
 
-            {/* Wrapper to ensure content doesn't touch navbar */}
-            <div className="page-content">
-                {/* This wrapper should be used in your App.js */}
-            </div>
+            
+            <div className="page-content"></div>
         </>
     );
 };

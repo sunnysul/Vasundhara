@@ -1,7 +1,6 @@
 import React from 'react';
 import './Client.css';
 
-// Import client logos (Ensure images are inside 'src/assets/logo' for Vite compatibility)
 import dhariwal from '../../assets/dhariwal.avif';
 import graphite from '../../assets/graphite.webp';
 import indiana from '../../assets/indiana.jpeg';
@@ -45,7 +44,7 @@ const Client = () => {
               src={client.image} 
               alt={client.name} 
               className="client-image"
-              loading="lazy" // Improves performance by lazy loading images
+              loading="lazy" 
             />
             <div className="client-name">{client.name}</div>
           </div>

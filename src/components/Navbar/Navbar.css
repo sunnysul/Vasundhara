@@ -1,4 +1,4 @@
-/* Navbar Styling */
+/* Navbar Base Styles */
 .navbar {
     width: 100%;
     position: fixed;
@@ -15,23 +15,26 @@
     z-index: 1000;
 }
 
+/* Logo */
 .nav-logo {
     height: 60px;
     cursor: pointer;
 }
 
+/* Navigation List */
 .nav-list {
     display: flex;
     list-style: none;
     align-items: center;
 }
 
+/* Navigation Items */
 .nav-list li {
     margin: 0 15px;
     position: relative;
 }
 
-.nav-list li a, .dropdown-toggle {
+.nav-list li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -41,7 +44,7 @@
     font-weight: 500;
 }
 
-.nav-list li a:hover, .dropdown-toggle:hover {
+.nav-list li a:hover {
     color: #fca311;
 }
 
@@ -50,6 +53,22 @@
     position: relative;
 }
 
+/* Services Link (without dropdown symbol) */
+.dropdown-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-weight: 500;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.dropdown-link:hover {
+    color: #fca311;
+}
+
+/* Dropdown Menu */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -67,7 +86,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
+.nav-item .dropdown-menu.show {
     display: flex;
     opacity: 1;
     transform: translateY(0);
@@ -93,7 +112,69 @@
     color: white;
 }
 
-/* Ensure page content doesn't touch navbar */
+/* Mobile Responsiveness */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: black;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: start;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 15px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    .nav-list li a {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: none;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .page-content {
-    padding-top: 90px; /* Adjust this based on navbar height */
+    padding-top: 90px; 
 }

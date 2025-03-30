@@ -52,7 +52,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    min-height: 550px; /* Adjust based on content */
+    min-height: 550px; 
   }
   
   .system-image-container {
@@ -299,7 +299,7 @@
       grid-template-columns: 1.5fr repeat(3, 1fr);
     }
   }
-  /* Add to EPCPage.css */
+
   .system-image-container {
     width: 100%;
     height: 250px;
@@ -319,10 +319,8 @@
     transform: scale(1.05);
   }
   
-  /* Update service-card padding */
   .service-card {
     padding: 1.5rem;
     overflow: hidden;
   }
   
-  /* Keep other styles same */

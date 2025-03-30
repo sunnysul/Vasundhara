@@ -5,7 +5,7 @@ import "./AboutSection.css";
 const AboutSection = () => {
   return (
     <section className="about-section">
-      {/* Left Side - Text Content */}
+    
       <div className="content">
         <h2 className="title">
           Leading the <span className="highlight">Solar Revolution</span>
@@ -16,7 +16,6 @@ const AboutSection = () => {
           and promote a sustainable future.
         </p>
 
-        {/* Animated Stats */}
         <div className="stats">
           <div className="stat-item">
             <span className="stat-number">100MW+</span>
@@ -31,7 +30,7 @@ const AboutSection = () => {
         <div className="experience-badge">10+ Years of Excellence</div>
       </div>
 
-      {/* Right Side - Image */}
+ 
       <div className="image-container">
         <div className="image-frame">
           <img src={aboutImage} alt="Solar Panel Installation" className="about-image" loading="lazy" />

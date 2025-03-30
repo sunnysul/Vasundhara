@@ -1,57 +1,57 @@
 /* Clients.css */
 .clients-page {
     padding: 60px 20px;
-    max-width: 1400px; /* Increased max-width */
+    max-width: 1400px; 
     margin: 0 auto;
     text-align: center;
   }
   
   .clients-page h1 {
-    font-size: 3rem; /* Larger heading */
+    font-size: 3rem; 
     margin-bottom: 50px;
     color: #333;
   }
   
   .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider columns */
-    gap: 40px; /* Increased gap */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px; 
     justify-content: center;
     padding: 30px;
   }
   
   .client-card {
     background: #fff;
-    border-radius: 12px; /* Larger border radius */
+    border-radius: 12px; 
     padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px; /* Taller cards */
-    border: 2px solid #e0e0e0; /* Thicker border */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* Stronger shadow */
+    height: 300px; 
+    border: 2px solid #e0e0e0; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08); 
   }
   
   .client-card:hover {
-    transform: translateY(-8px); /* More pronounced hover lift */
+    transform: translateY(-8px); 
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
     border-color: #b0b0b0;
   }
   
   .client-image {
-    max-width: 220px; /* Larger images */
+    max-width: 220px; 
     max-height: 160px;
     object-fit: contain;
-    margin-bottom: 20px; /* More spacing */
+    margin-bottom: 20px; 
     transition: transform 0.3s ease;
   }
   
   .client-name {
-    font-size: 1.4rem; /* Larger text */
+    font-size: 1.4rem; 
     color: #555;
-    font-weight: 600; /* Bolder font */
+    font-weight: 600; 
     text-align: center;
     margin-top: auto;
     padding: 10px 0;

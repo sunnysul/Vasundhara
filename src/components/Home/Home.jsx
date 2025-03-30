@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
-import heroVideo from "../../assets/solar-hero.mp4"; // Adjust the path based on your structure
+import heroVideo from "../../assets/solar-hero.mp4"; 
 import "./Home.css";
 import ContactSection from "./ContactSection";
 import ClientSection from "./ClientSection";

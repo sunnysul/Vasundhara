@@ -15,7 +15,7 @@
     border-top: 3px solid var(--solar-yellow);
     text-align: center;
     box-sizing: border-box;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto; 
   }
   
   .footer__content {
@@ -24,8 +24,7 @@
     padding: 0 clamp(1rem, 3vw, 2rem);
   }
   
-  /* Rest of your existing footer styles remain exactly the same */
-  /* ... (keep all your existing footer styles below this line) ... */
+
   /* Brand Section */
   .footer__brand {
     text-align: center;

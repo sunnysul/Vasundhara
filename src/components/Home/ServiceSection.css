@@ -151,7 +151,7 @@
       height: 350px;
     }
   }
-  /* Add these media queries at the end of the existing CSS */
+  
   
   @media (max-width: 1200px) {
     .hero h1 {

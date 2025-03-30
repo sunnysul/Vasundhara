@@ -2,7 +2,7 @@ import React from 'react';
 import { FaLeaf, FaLightbulb, FaUsers, FaChartLine, FaSun, FaSolarPanel } from 'react-icons/fa';
 import './AboutUS.css';
 import solarfarm from "../../assets/solar-farm.jpeg";
-import videoFile from "../../assets/video.mp4"; // Ensure correct import
+import videoFile from "../../assets/video.mp4"; 
 
 const AboutUs = () => {
     return (
