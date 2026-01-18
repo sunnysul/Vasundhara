@@ -6,7 +6,7 @@ import "./index.css";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router> 
-    <App />
-  </Router>
+  <React.StrictMode>
+    <App />  {/* App already contains RouterProvider */}
+  </React.StrictMode>
 );
